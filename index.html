@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="appjs/app.min.css">
+    <style type="text/css">
+      @-webkit-keyframes pulse {
+        0% {
+          background-color: #CCC;
+        }
+        25% {
+          background-color: #EEE;
+        }
+        50% {
+          background-color: #CCC;
+        }
+        75% {
+          background-color: #EEE;
+        }
+        100% {
+          background-color: #CCC;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="app-page" data-page="home">
+
+      <div class="app-topbar blue">
+        <div class="app-title">Send Email</div>
+      </div>
+
+      <div class="app-content">
+
+        <p class="app-section">Click bellow to send an email!</p>
+
+        <div class="app-section" id="contact-list"></div>
+
+        <div class="app-section">
+          <div id="new-user" class="app-button">Send to new user</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="app-page" data-page="page2">
+
+			<div class="app-topbar">
+				<div class="app-title">Create Email</div>
+				<div class="right app-button" data-back>Done</div>
+			</div>
+
+      <div class="app-content">
+
+        <div id="info" class="app-section"></div>
+
+        <div class="app-section">
+          <strong>From:</strong>
+					<input class="app-input" id="sender-email" placeholder="Sender Email Address" />
+				</div>
+
+        <div class="app-section">
+          <strong>To:</strong>
+					<input class="app-input" id="recipient-email" placeholder="Recipient Email Address" />
+				</div>
+
+        <form class="app-section">
+					<input id="subject" class="app-input" name="subject" placeholder="Subject" />
+					<textarea id="message" class="app-input" name="message" placeholder="Message"></textarea>
+					<div id="send-btn" class="app-button green app-submit">Send</div>
+				</form>
+
+      </div>
+
+		</div>
+
+    <script src="appjs/zepto.js"></script>
+    <script src="appjs/app.min.js"></script>
+    <script src="functions.js"></script>
+
+  </body>
+</html>
